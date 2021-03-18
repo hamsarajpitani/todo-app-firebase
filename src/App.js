@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-lone-blocks */
 import "./App.css";
-import Modal from '@material-ui/core/Modal';
+
 
 import Card from "@material-ui/core/Card";
 import AddIcon from "@material-ui/icons/Add";
