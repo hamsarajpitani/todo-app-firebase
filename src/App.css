@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color: white;
+  --color: black;
 }
 
 .main {
@@ -9,9 +9,12 @@
   place-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: #6155b9;
-  padding: 80px 12px;
+  background-color: #e0e0e0;
+  padding: 80px 19px;
   font-family: "Poppins", sans-serif;
+}
+.title{
+  text-shadow: 3px 2px 7px rgba(255, 253, 253, 0.904) !important;
 }
 .Card {
   
@@ -21,13 +24,13 @@
 
   color: var(--color);
  
-  border-radius: 45px;
-  background: #6155b9 !important;
-  box-shadow:  5px 5px 6px #4e4494,
-               -5px -5px 6px #7466de !important;
+
+  background: #e0e0e0 !important;
+  box-shadow:  20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff !important;
   border-radius: 20px !important;
   overflow: hidden;
-  padding: 1.3rem;
+  padding: 1  rem;
   display: flex;
 }
 
@@ -39,7 +42,7 @@
   overflow-y: scroll;
 }
 
-.Card-content::-webkit-scrollbar {
+.Card-content::-webkit-scrollbar {  
   display: none;
 }
 
@@ -55,17 +58,17 @@ h1 {
 
 .list-items {
   display: flex;
-  margin: 20px 0;
+  margin: 25px 0;
   font-weight: 500;
   font-family: "Josefin Sans", sans-serif;
   color: inherit;
-  border-radius: 5px;
+  border-radius: 15px;
 
  
 
-  background: #6155b9;
-  box-shadow: inset 5px 5px 6px #4e4494,
-              inset -5px -5px 6px #7466de !important;
+background: #e0e0e0;
+box-shadow: inset 8px 8px 16px #cac9c9,
+            inset -8px -8px 16px #f7f3f3;
 }
 
 .update__modal {

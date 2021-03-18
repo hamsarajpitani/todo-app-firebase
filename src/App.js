@@ -50,7 +50,7 @@ function App() {
     <div className="main">
       <Card className="Card w-100 h-100">
         <CardContent className="Card-content w-100 h-100">
-          <h1 className="text-center mb-4">Todo App </h1>
+          <h1 className="text-center mb-4 titl">Todo App </h1>
           <form className="d-flex align-items-center justify-content-between">
             <TextField
               id="standard-textarea"
