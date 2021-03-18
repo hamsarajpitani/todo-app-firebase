@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-lone-blocks */
 import "./App.css";
-import IconButton from "@material-ui/core/IconButton";
+import Modal from '@material-ui/core/Modal';
+
 import Card from "@material-ui/core/Card";
 import AddIcon from "@material-ui/icons/Add";
 import List from "@material-ui/core/List";
 
-import DeleteIcon from "@material-ui/icons/Delete";
-import ListItem from "@material-ui/core/ListItem";
+
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -15,6 +15,7 @@ import { useEffect, useState } from "react";
 
 import firebase from "firebase";
 import db from "./firebase";
+import Todos from "./todos";
 
 function App() {
   const [todo, setTodo] = useState([]);
@@ -52,9 +53,7 @@ function App() {
     setInput("");
   };
 
-  const handledelete = (id) => {
-    db.collection("todos").doc(id).delete();
-  };
+
   return (
     <div className="main">
       <Card className="Card w-100 h-100">
@@ -79,21 +78,11 @@ function App() {
               <AddIcon />
             </Button>
           </form>
-          
+
           <List className="list">
             {todo.map((item) => {
               return (
-                <div className="list-items">
-                  <ListItem>{item.todo}</ListItem>
-
-                  <IconButton
-                    onClick={() => handledelete(item.id)}
-                    aria-label="delete"
-                    className=""
-                  >
-                    <DeleteIcon fontSize="large" />
-                  </IconButton>
-                </div>
+                <Todos data={item}/>
               );
             })}
           </List>
