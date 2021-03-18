@@ -2,15 +2,8 @@
 /* eslint-disable no-lone-blocks */
 import "./App.css";
 
-
-import Card from "@material-ui/core/Card";
 import AddIcon from "@material-ui/icons/Add";
-import List from "@material-ui/core/List";
-
-
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
+import { Card,List,CardContent,Button,TextField,} from "@material-ui/core";
 import { useEffect, useState } from "react";
 
 import firebase from "firebase";
@@ -53,7 +46,6 @@ function App() {
     setInput("");
   };
 
-
   return (
     <div className="main">
       <Card className="Card w-100 h-100">
@@ -81,9 +73,7 @@ function App() {
 
           <List className="list">
             {todo.map((item) => {
-              return (
-                <Todos data={item}/>
-              );
+              return <Todos data={item} />;
             })}
           </List>
         </CardContent>

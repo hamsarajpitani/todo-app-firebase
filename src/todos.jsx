@@ -2,12 +2,14 @@
 import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { Modal, ListItem, Button ,TextField } from "@material-ui/core";
-import EditIcon from "@material-ui/icons/Edit";
+import EditIcon from '@material-ui/icons/Edit';
 import ClearIcon from '@material-ui/icons/Clear';
+
 import CheckIcon from '@material-ui/icons/Check';
 import { useState } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import db from "./firebase";
+
 
 const todos = (props) => {
   const [open, setOpen] = useState(false);
@@ -26,6 +28,7 @@ const todos = (props) => {
   return (
     <>
       <Modal
+      className="model-input"
       BackdropProps={{ invisible: true }}
         open={open}
         onClose={(e) => setOpen(false)}
@@ -40,7 +43,9 @@ const todos = (props) => {
               placeholder={props.data.todo}
               multiline
               value={newinput}
+              className="input"
               onChange={(e) => setNewinput(e.target.value)}
+                
             />
             <Button
               variant="contained"
@@ -54,7 +59,7 @@ const todos = (props) => {
               color="secondary"
               onClick={() => setOpen(false)}
             >
-              <ClearIcon/>
+            <ClearIcon/>
             </Button>
           </div>
         </div>
@@ -68,7 +73,7 @@ const todos = (props) => {
           aria-label="delete"
           className=""
         >
-          <EditIcon />
+         <EditIcon/>
         </IconButton>
 
         <IconButton
